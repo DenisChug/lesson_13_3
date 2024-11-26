@@ -3,13 +3,13 @@ import asyncio
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters.command import Command, Message
 
-api = '7740609310:AAE0HSOBjD4QOZDAP7EyxSaV-omMbdS-8iI'
+api = '7740609310:AAHHr2TenfH_OsW4XTPEHQlNLm6oR802mNQ'
 bot = Bot(token=api)
 dp = Dispatcher()
 
 @dp.message(Command("start"))
 async def cmd_start(message: types.Message):
-    await message.answer("")
+    await message.answer("Привет! Я бот помогающий твоему здоровью.")
     print('Привет! Я бот помогающий твоему здоровью.' )
 
 @dp.message(F.text)
